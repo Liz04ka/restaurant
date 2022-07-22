@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>бронь стола</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="title">Расставьте столы</h1>
+        <div class="servis">
+
+            <div class="block block__walls">
+                <div class="subtitle walls__title">
+                    Возьмите стену:
+                </div>
+                <div class="dragItem wall wall__horizontal" draggable="true" data-item="horizontal"></div>
+                <div class="dragItem wall wall__vertical" draggable="true" data-item="vertical"></div>
+            </div>
+
+            <div class="block block__zone">
+                <div class="block__dragzone">
+                    
+                </div>
+            </div>
+
+            <div class="block block__tables">
+                <div class="subtitle tables__title">
+                    Возьмите стол:
+                </div>
+                <div class="dragItem table tables__two" draggable="true" data-item="2"></div>
+                <div class="dragItem table tables__four" draggable="true" data-item="4"></div>
+                <div class="dragItem table tables__six" draggable="true" data-item="6"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

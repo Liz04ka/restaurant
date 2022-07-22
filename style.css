@@ -1,0 +1,89 @@
+.wrapper{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.subtitle{
+    margin-bottom: 10px;
+}
+
+.title{
+    text-align: center;
+}
+
+.servis{
+    display: flex;
+    /* align-items: flex-start; */
+}
+
+.block{
+    margin-right: 20px;
+    box-shadow: 10px 5px 5px rgb(27, 22, 105);
+    padding: 15px;
+    border: 0.5px rgb(105, 105, 105) solid;
+    border-radius: 15px;
+}
+
+.block__zone{
+    width: 80%;
+    /* height: 100%; */
+}
+
+
+.block__dragzone{
+    height: 100%;
+    border: 0.5px rgb(105, 105, 105) solid;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dragItem {
+    cursor: pointer;
+}
+
+.dragItem__active{
+    /* opacity: 0.5; */
+}
+
+.block__tables{
+    height: 500px;
+}
+
+.block__walls{
+
+}
+
+.wall{
+    margin-bottom: 10px;
+}
+
+.wall__horizontal{
+    background-color: rgb(66, 66, 52);
+    height: 8px;
+    width: 100px;
+}
+
+.wall__vertical{
+    background-color: rgb(85, 85, 79);
+    height: 70px;
+    width: 8px;   
+}
+
+.table{
+    width: 100px;
+    background-color: rgb(66, 66, 52);
+    margin-bottom: 20px;
+}
+
+.tables__two{
+    height: 50px;
+}
+
+.tables__four{
+    height: 79px;
+}
+
+.tables__six{
+    height: 110px;
+}
