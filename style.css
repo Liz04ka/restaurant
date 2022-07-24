@@ -18,7 +18,7 @@
 
 .block{
     margin-right: 20px;
-    box-shadow: 10px 5px 5px rgb(27, 22, 105);
+    box-shadow: 5px 0px 5px rgb(5, 29, 51);
     padding: 15px;
     border: 0.5px rgb(105, 105, 105) solid;
     border-radius: 15px;
@@ -56,24 +56,25 @@
 
 .wall{
     margin-bottom: 10px;
+    border-radius: 2px;
+    background-color: rgb(38, 38, 33)
 }
 
 .wall__horizontal{
-    background-color: rgb(66, 66, 52);
-    height: 8px;
+    height: 10px;
     width: 100px;
 }
 
 .wall__vertical{
-    background-color: rgb(85, 85, 79);
-    height: 70px;
-    width: 8px;   
+    height: 100px;
+    width: 10px;   
 }
 
 .table{
     width: 100px;
-    background-color: rgb(66, 66, 52);
+    background-color: rgb(87, 87, 73);
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .tables__two{
