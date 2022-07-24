@@ -8,10 +8,6 @@ dragItem.forEach(dragItem => {
 
     // начинатеся перетаскивание эл-та
     dragItem.addEventListener('dragstart', handlerDragstart)
-
-    // завершается перетаскивание эл-та
-    // dragItem.addEventListener('dragend', handlerDragend)
-
 });
 
 
@@ -21,6 +17,9 @@ dragItem.forEach(dragItem => {
 
 // перетаскиваемый эл-нт попадает в допустимую цель сброса
 dragZone.addEventListener('dragenter', handlerDragEnter)
+
+// перетаскиваемый эл-т покидает допустимую цель сброса 
+// dragZone.addEventListener('dragleave', handlerDragLeave)
 
 // перетаскиваемый эл-т над допустимой целью сброса 
 dragZone.addEventListener('dragover', handlerDragOver)
@@ -58,16 +57,17 @@ function handlerDrop(event) {
     const dragflag = event.dataTransfer.getData("dragItem")
     const dataItem = document.getElementById(dragflag)
     if (parseInt(dragflag)>5) {
-        dataItem.style.top = (event.pageY - offsetY - 100) + 'px';
-        dataItem.style.left = (event.pageX - offsetX - 450) + 'px';
+        dataItem.style.top = (event.pageY - offsetY - dragZone.getBoundingClientRect().top) + 'px';
+        dataItem.style.left = (event.pageX - offsetX - dragZone.getBoundingClientRect().left) + 'px';
     } else {
         const copy = dataItem.cloneNode(true)
         copy.id = (counter++).toString()
-        copy.style.top = (event.pageY - offsetY - 100) + 'px' ;
-        copy.style.left = (event.pageX - offsetX - 450) + 'px';
+        copy.style.top = (event.clientY - offsetY - dragZone.getBoundingClientRect().top) + 'px' ;
+        copy.style.left = (event.clientX - offsetX - dragZone.getBoundingClientRect().left) + 'px';
         copy.style.position = "absolute";
         dragZone.append(copy);
         copy.addEventListener('dragstart', handlerDragstart)
     }
 }
+
 
