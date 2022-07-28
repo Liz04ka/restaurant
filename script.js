@@ -1,6 +1,24 @@
 const dragZone = document.querySelector('.block__dragzone');
+const zone = document.querySelector('.block__zone')
 const dragItem = document.querySelectorAll('.dragItem');
 const homeZone = document.querySelector('.block__tables');
+const sizebtn = document.querySelectorAll('.size')
+const resizer = document.querySelectorAll('.resizer')
+
+
+sizebtn.forEach(el => {
+    el.addEventListener('click', function() {
+      sizebtn.forEach(el => el.classList.remove('size__active'));
+      el.classList.add('size__active');
+      if (el.classList.contains('size_sqrt')){
+        // zone.style.width = '800px'
+      } else if (el.classList.contains('size_rect')){
+        console.log('rect')
+      } else {
+        console.log('smth else')
+      }
+    });
+  });
 
 
 // события для перетаскиваемых эл-ов
@@ -70,4 +88,30 @@ function handlerDrop(event) {
     }
 }
 
+// let currentResizer;
 
+// resizer.forEach(el => {
+//     el.addEventListener('mousedown', mousedown);
+
+//     function mousedown(e) {
+//       currentResizer = e.target;
+
+//       let prevX = e.clientX;
+//       let prevY = e.clientY;
+
+
+
+
+//       window.addEventListener('mousemove', mousemove);
+//       window.addEventListener('mouseup', mouseup);
+
+//       function mousemove(e) {
+//         const rect = el.
+//       }
+
+//       function mouseup() {
+
+//       }
+
+//     }
+// })
