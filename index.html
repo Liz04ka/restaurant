@@ -17,8 +17,18 @@
                 <div class="subtitle walls__title">
                     Возьмите стену:
                 </div>
-                <div class="dragItem wall wall__horizontal" draggable="true" data-item="horizontal"></div>
-                <div class="dragItem wall wall__vertical" draggable="true" data-item="vertical"></div>
+                <div id="4" class="dragItem wall wall__horizontal" draggable="true" data-item="horizontal">
+                    <div class="resizer nw"></div>
+                    <div class="resizer ne"></div>
+                    <div class="resizer ns"></div>
+                    <div class="resizer nn"></div>
+                </div>
+                <div id="5" class="dragItem wall wall__vertical" draggable="true" data-item="vertical">
+                    <div class="resizer nw"></div>
+                    <div class="resizer ne"></div>
+                    <div class="resizer ns"></div>
+                    <div class="resizer nn"></div>
+                </div>
             </div>
 
             <div class="block block__zone">
@@ -31,11 +41,38 @@
                 <div class="subtitle tables__title">
                     Возьмите стол:
                 </div>
-                <div class="dragItem table tables__two" draggable="true" data-item="2"></div>
-                <div class="dragItem table tables__four" draggable="true" data-item="4"></div>
-                <div class="dragItem table tables__six" draggable="true" data-item="6"></div>
+                <div id="1" class="dragItem table tables__two" draggable="true" data-item="2">
+                    <div class="resizer nw"></div>
+                    <div class="resizer ne"></div>
+                    <div class="resizer ns"></div>
+                    <div class="resizer nn"></div>
+                </div>
+                <div id="2" class="dragItem table tables__four" draggable="true" data-item="4">
+                    <div class="resizer nw"></div>
+                    <div class="resizer ne"></div>
+                    <div class="resizer ns"></div>
+                    <div class="resizer nn"></div>
+                </div>
+                <div id="3" class="dragItem table tables__six" draggable="true" data-item="6">
+                    <div class="resizer nw"></div>
+                    <div class="resizer ne"></div>
+                    <div class="resizer ns"></div>
+                    <div class="resizer nn"></div>
+                </div>
             </div>
         </div>
+        <div class="choose block">
+            <div class="choose__subtitle subtitle">
+                Размер зала: 
+            </div>
+            <div class="choose_sizes">
+                <button class="size size_sqrt">1 : 1</button>
+                <button class="size size_rect size__active">4 : 3</button>
+                <button class="size size_create">свой размер</button>
+            </div>
+        </div>
+        
+        <button>Сохранить</button>
     </div>
 </body>
 </html>
