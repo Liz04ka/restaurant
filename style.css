@@ -14,6 +14,7 @@
 .servis{
     display: flex;
     /* align-items: flex-start; */
+    margin-bottom: 20px;
 }
 
 .block{
@@ -40,6 +41,8 @@
 
 .dragItem {
     cursor: pointer;
+    resize: both;
+    overflow: hidden;
 }
 
 .dragItem__active{
@@ -57,7 +60,8 @@
 .wall{
     margin-bottom: 10px;
     border-radius: 2px;
-    background-color: rgb(38, 38, 33)
+    background-color: rgb(38, 38, 33);
+    position: relative;
 }
 
 .wall__horizontal{
@@ -75,6 +79,8 @@
     background-color: rgb(87, 87, 73);
     margin-bottom: 20px;
     border-radius: 5px;
+    position: relative;
+    cursor: move;
 }
 
 .tables__two{
@@ -87,4 +93,64 @@
 
 .tables__six{
     height: 110px;
+}
+
+.choose{
+    display: flex;
+    margin: 0 auto;
+    max-width: 400px;
+    justify-content: space-between;
+}
+
+.choose__subtitle{
+    margin: 0;
+}
+
+.size{
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+.size:hover {
+    background-color: #c9c9c9;
+} 
+
+.size__active{
+    background-color: #c9c9c9;
+}
+
+.resizer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #a0a395;
+    z-index: 2;
+}
+
+.resizer.nw {
+    top: -1px;
+    left: -1px;
+    cursor: nw-resize;
+}
+
+.resizer.ne {
+    top: -1px;
+    right: -1px;
+    cursor: nw-resize;
+}
+
+.resizer.ns {
+    bottom: -1px;
+    left: -1px;
+    cursor: nw-resize;
+}
+
+.resizer.nn {
+    bottom: -1px;
+    right: -1px;
+    cursor: nw-resize;
 }
